@@ -1,3 +1,4 @@
+var  PORT=process.env.PORT || 8000; 
 const express = require('express');
 const app=express();
 var path=require("path")
@@ -8,7 +9,7 @@ var öğrencimodeli=require("./schemas/öğrenci")  //öğrenci modeli eklendi
 var  ejslayout=require("express-ejs-layouts")          
 var routers=require("./routers/Routers")
 var route=require("./routers/kayıtrouters")
-let  PORT=process.env.PORT || 8000;   
+  
 
 
 app.use(express.static("public"))    //statik dosyaların kullanımını sağlar.statik dosyaları eklerken bu dizinden başla.
