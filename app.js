@@ -8,7 +8,7 @@ var öğrencimodeli=require("./schemas/öğrenci")  //öğrenci modeli eklendi
 var  ejslayout=require("express-ejs-layouts")          
 var routers=require("./routers/Routers")
 var route=require("./routers/kayıtrouters")
-const port=8080;      
+const PORT=process.env.PORT || 8080;   
 
 
 app.use(express.static("public"))    //statik dosyaların kullanımını sağlar.statik dosyaları eklerken bu dizinden başla.
@@ -25,13 +25,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
  //app.use("/",routers)
- // app.use("/",route)
- app.get("/",function(req,res){
-    res.send("deneme")
- })
+  app.use("/",route)
 
 
 
-app.listen(port, () => {
-   console.log(`Server started on port`+port);
+
+app.listen(PORT, () => {
+   console.log(`Server started on port`+PORT);
 });
