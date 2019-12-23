@@ -8,7 +8,7 @@ var öğrencimodeli=require("./schemas/öğrenci")  //öğrenci modeli eklendi
 var  ejslayout=require("express-ejs-layouts")          
 var routers=require("./routers/Routers")
 var route=require("./routers/kayıtrouters")
-const PORT=process.env.PORT || 8080;   
+let  PORT=process.env.PORT || 8000;   
 
 
 app.use(express.static("public"))    //statik dosyaların kullanımını sağlar.statik dosyaları eklerken bu dizinden başla.
