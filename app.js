@@ -22,10 +22,13 @@ app.set("views",path.join(__dirname,"./views"))
 app.use(ejslayout)
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get("/", (req, res) => {
+res.send("deneme55")
+});
 
 
  //app.use("/",routers)
-  app.use("/",route)
+  //app.use("/",route)
 
 
 
